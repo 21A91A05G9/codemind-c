@@ -2,19 +2,21 @@
 #include<math.h>
 int main()
 {
-    int n,d;
+    int n;
     scanf("%d",&n);
     if(n<0)
     {
         printf("-");
     }
-    while(n!=0)
+    int d,x;
+    x=abs(n);
+    while(x>0)
     {
-        d=abs(n)%10;
+        d=x%10;
         if(d!=0)
         {
             printf("%d",d);
         }
-        n=n/10;
+        x=x/10;
     }
 }
