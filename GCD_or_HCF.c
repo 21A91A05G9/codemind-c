@@ -1,25 +1,17 @@
 #include<stdio.h>
 int main()
 {
-	int arr[100],a,b,hcf,co,min,k,c=0;
-	scanf("%d%d",&a,&b);
-if(a>b)
-{
-    min=b;
-}
-else
-{
-    min=a;
-}
-for(k=min;k>=1;k--)
-{
-	
-		if(a%k==0 && b%k==0)
-	                  
-		{
-			hcf=k;
-			break;	                               
-		}	    
-}	
-printf("%d",hcf);
+    int n,m,min,i;
+    scanf("%d%d",&n,&m);
+    min=n;
+    if(n>m)
+    min=m;
+    for(int i=min;i>0;i--)
+    {
+        if(n%i==0 && m%i==0)
+        {
+            printf("%d",i);
+            break;
+        }
+    }
 }
