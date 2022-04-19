@@ -1,14 +1,17 @@
 #include<stdio.h>
 int main()
 {
-    int n,j,x=0,y=1,c;
+    int n,temp;
     scanf("%d",&n);
+    int x=0,y=1;
     printf("%d ",x);
-    for(j=0;j<n-1;j++)
+    int i=0;
+    while(i<(n-1))
     {
-      c=x;
-      x=x+y;
-      printf("%d ",x);
-      y=c;
+        temp=x;
+        x=x+y;
+        printf("%d ",x);
+        y=temp;
+        i++;
     }
 }
