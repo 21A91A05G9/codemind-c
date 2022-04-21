@@ -1,31 +1,37 @@
-  #include<stdio.h>
-int sd(int);
+#include<stdio.h>
+int s(int n)
+{
+    int i,d,y=0,x,c=0;
+    x=n;
+    while(n>0)
+    {
+        d=n%10;
+        if(d==0)
+        {
+            return 0;
+        }
+        else if(x%d==0)
+        {
+            c++;
+        }
+        y++;
+        n=n/10;
+    }
+    if(y==c)
+    {
+        return 1;
+    }
+    return 0;
+}
 int main()
 {
     int a,b,i;
-   scanf("%d%d",&a,&b);
+    scanf("%d%d",&a,&b);
     for(i=a;i<=b;i++)
     {
-        if(sd(i)==1) 
-        printf("%d ",i);
+        if(s(i)==1)
+        {
+            printf("%d ",i);
+        }
     }
-}
-int sd(int n)
-{
-    int c=0,d=0,r;
-   int t=n;
-    while(n>0)
-    {
-        r=n%10;
-        if(r==0) 
-        return 0;
-        if(t%r==0) 
-        c++;
-        d++;
-        n/=10;
-    }
-    if(c==d)
-    return 1;
-    else 
-    return 0;
 }
